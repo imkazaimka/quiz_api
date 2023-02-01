@@ -44,7 +44,7 @@ def get_leaders(level):
 def get_questions(level : str , q_set : str)-> Dict:
     questions = models.get_questions(level , q_set)
 
-    result = {'timer' : 45, 'questions': [{'question_id': i[0], i[1]: i[2:6]} for i in questions]}
+    result = {'timer' : 45, 'questions': [{'question_id': i[0], 'question' : i[1] , 'answers':   i[2:6]} for i in questions]}
 
     return result
 
